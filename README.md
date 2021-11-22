@@ -13,4 +13,7 @@ Ma, X., & Yan, J. (2011, August). An improved parallel banker's algorithm based 
 
 The figure above shows the overview of the WSN to detect a tsunami. The tsunameter sensors are positioned in a 3 × 3 grid configuration. Note that Communication Satellites A1 and A2 are actually the same satellite at different position. For the purpose of illustration, two communication satellites are drawn here to reduce the number of overlapping lines between the tsunameter sensors and the communication satellite. In addition, the satellite altimeter covers or observes the same grid layout where the tsunameter sensors are located. Note that satellite altimeter only communicates with the base station and does not communicate with any of the tsunameter sensors.
 
-A simulation model was designed and implemented using a combination of OpenMPI and POSIX libraries.
+A simulation model was designed and implemented using a combination of OpenMPI and POSIX libraries. In order to compile and run the code, the user is required to input the number of processes (np), the desired grid dimensions of the sensor nodes (row and col), the sea water column height threshold value (threshold) and the number iterations for the base station to run (iter). Without user input, the values are default to np=10, row=3, col=3 threshold=6000, iter=x. The following are the lines of command line input that will 1) compile all the files together using a Makefile and 2) allow the user to specify parameters and easily run the MPI executable file and 3) clean up the files by removing all additional files that was created from the first line:
+1. make
+2. make run np=XX row=XX col=XX threshold=XX iter=XX
+3. make clean
